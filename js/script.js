@@ -1,7 +1,7 @@
 // Selecao de elementos
 const multiplicationForm = document.querySelector("#multiplication-form");
 const numberInput = document.querySelector("#number");
-const multipicationInput = document.querySelector("#multiplicator");
+const multiplicationInput = document.querySelector("#multiplicator");
 
 // Functions
 
@@ -12,4 +12,8 @@ multiplicationForm.addEventListener("submit", (e) => {
   const multiplicationNumber = +numberInput.value;
 
   const multiplicatorNumber = +multiplicationInput.value;
+
+  if (!multiplicationNumber || multiplicatorNumber) return;
+
+  console.log(multiplicationNumber, multiplicatorNumber);
 });
